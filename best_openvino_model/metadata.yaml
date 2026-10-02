@@ -1,0 +1,24 @@
+description: Ultralytics YOLO11n model trained on C:\Users\pilja\Downloads\-27.v4i.yolov8\data.yaml
+author: Ultralytics
+date: '2026-10-02T18:05:56.692707+07:00'
+version: 8.4.151
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+head: Detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: KIRI
+args:
+  data: null
+  batch: 1
+  fraction: 1.0
+  quantize: null
+  nms: null
+  dynamic: false
+channels: 3
+end2end: false

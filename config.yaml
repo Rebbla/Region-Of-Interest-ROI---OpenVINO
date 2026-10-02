@@ -1,0 +1,13 @@
+camera : 0
+model: "/home/pilja/trash_sort_cpp/best_openvino_model/best.xml"
+device : "CPU"
+conf : 0.80
+iou : 0.45
+imgsz : 416
+# names: isi jika metadata.yaml tidak ada di folder model
+names : []
+
+roi_active : [[0.25, 0.25],[0.75,0.25],[0.75, 0.80],[0.25,0.80]]
+roi_guard : [[0.0, 0.0],[1.0,0.0],[1.0,1.0],[0.0,1.0]]
+
+roi_show : true

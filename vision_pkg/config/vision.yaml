@@ -1,0 +1,22 @@
+vision_node:
+  ros__parameters:
+    # Topik kamera. Contoh ZED: /zed/zed_node/rgb/image_rect_color
+    # realsense: /camera/color/image_raw
+    image_topic: "/zed/zed_node/rgb/image_rect_color"
+
+    # Kosong = pakai <share>/vision_pkg/models/best.xml
+    model_path: ""
+    device: "CPU"
+    imgsz: 640
+    conf: 0.80
+    iou: 0.45
+
+    publish_debug: true
+    # QoS topik /vision/debug_image: "reliable" (default, cocok utk showimage/rqt)
+    # atau "best_effort" (bandwidth lebih hemat)
+    debug_qos: "reliable"
+
+    # ROI dalam koordinat ternormalisasi (x,y,x,y,...).
+    # Kalau dua-duanya kosong -> seluruh frame dianggap guard (tidak memfilter deteksi).
+    roi_active: [0.25, 0.25, 0.75, 0.25, 0.75, 0.80, 0.25, 0.80]
+    roi_guard: [0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
